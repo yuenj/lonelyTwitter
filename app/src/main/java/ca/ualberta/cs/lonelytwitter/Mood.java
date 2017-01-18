@@ -1,6 +1,6 @@
 package ca.ualberta.cs.lonelytwitter;
 
-public abstract class Mood {
+public abstract class Mood implements Moodable {
     private Date date;
 
     public Mood(Date date){

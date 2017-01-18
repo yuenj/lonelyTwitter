@@ -6,7 +6,7 @@ import java.util.Date;
 public abstract class Tweet implements Tweetable {
     private Date date;
     private String message;
-    private ArrayList moods;
+    private ArrayList<Mood> moods;
     // private String hiddenString;
 
     public Tweet(Date date, String message) throws TweetTooLongException {
