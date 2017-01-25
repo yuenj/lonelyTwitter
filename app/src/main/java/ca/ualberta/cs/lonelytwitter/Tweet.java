@@ -1,6 +1,7 @@
 package ca.ualberta.cs.lonelytwitter;
 
 import java.util.Date;
+import java.util.ArrayList;
 
 
 public abstract class Tweet implements Tweetable {
@@ -33,7 +34,7 @@ public abstract class Tweet implements Tweetable {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(String message) throws TweetTooLongException {
         if (message.length() > 144) {
             // todo throw new error here
             throw new TweetTooLongException();

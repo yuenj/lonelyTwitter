@@ -1,6 +1,9 @@
+
 package ca.ualberta.cs.lonelytwitter;
+
+import java.util.Date;
 
 public interface Moodable {
     public Date getDate();
-    public setDate(Date date) {
+    public void setDate(Date date);
 }

@@ -1,5 +1,7 @@
 package ca.ualberta.cs.lonelytwitter;
 
+import java.util.Date;
+
 public abstract class Mood implements Moodable {
     private Date date;
 
@@ -15,7 +17,7 @@ public abstract class Mood implements Moodable {
         return date;
     }
 
-    public setDate(Date date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

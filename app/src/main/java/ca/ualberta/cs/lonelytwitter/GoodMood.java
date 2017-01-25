@@ -1,12 +1,14 @@
 package ca.ualberta.cs.lonelytwitter;
 
+import java.util.Date;
+
 public class GoodMood extends Mood {
     public GoodMood(Date date){
-        this.date = date;
+        super(date);
     }
 
     public GoodMood() {
-        this.date = new Date();	//current time and date
+        super();
     }
 
     public String getMood() {
