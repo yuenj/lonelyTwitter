@@ -1,4 +1,6 @@
 package ca.ualberta.cs.lonelytwitter;
+import java.util.Comparator;
+import java.util.Date;
 
 /**
  * Created by romansky on 1/14/16.
@@ -6,6 +8,10 @@ package ca.ualberta.cs.lonelytwitter;
 public class NormalTweet extends Tweet implements Tweetable {
     public NormalTweet(String message) {
         super(message);
+    }
+
+    public NormalTweet(String message, Date date) {
+        super(message, date);
     }
 
     @Override
