@@ -71,10 +71,15 @@ public class TweetListTest extends ActivityInstrumentationTestCase2 {
         Tweet tweet2 = new NormalTweet("date2", new Date(2017, 02, 14));
         Tweet tweet3 = new NormalTweet("date3", new Date(2017, 02, 15));
 
+        boolean sorted = true;
         ArrayList<Tweet> tweetList = tweets.getTweets();
         for (int i = 0; i < tweetList.size() - 1; i++) {
-            assertTrue(tweetList.get(i).getDate().compareTo(tweetList.get(i + 1).getDate()) < 0);
+            if (tweetList.get(i).getDate().compareTo(tweetList.get(i + 1).getDate()) > 0) {
+                sorted = false;
+                break;
+            }
         }
+        assertTrue(sorted);
     }
 
     public void testGetCount() {
